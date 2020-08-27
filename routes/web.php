@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/reward', 'RewardController');
+Route::resource('reward', 'RewardController');
+
+// message追加予定
