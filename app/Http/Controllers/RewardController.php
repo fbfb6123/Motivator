@@ -13,7 +13,7 @@ class RewardController extends Controller
      */
     public function index()
     {
-        //
+        return view('reward.index');
     }
 
     /**
