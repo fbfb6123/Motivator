@@ -16,6 +16,8 @@ class Controller extends BaseController
     public function index(Request $request)
     {
         $user = Auth::user();
+        $sort = $request->sort;
+        $items = Person::orderBy($sort, 'abc')->simplePaginate(5);
     }
 
 }
