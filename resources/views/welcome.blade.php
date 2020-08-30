@@ -65,7 +65,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-          @if (AUth::check())
+          @if (Auth::check())
           <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
           @else
           <p>※ログインしていません。 (<a herf="/login">ログイン</a>|
