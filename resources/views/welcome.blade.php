@@ -68,7 +68,8 @@
         @if (AUth::check())
         <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
         @else
-        <p>※
+        <p>※ログインしていません。 (<a herf="/login">ログイン</a>|
+        <a herf="/register">登録</a>)
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
