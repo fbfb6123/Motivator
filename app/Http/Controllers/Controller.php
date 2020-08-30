@@ -19,6 +19,7 @@ class Controller extends BaseController
         $sort = $request->sort;
         $items = Person::orderBy($sort, 'abc')->simplePaginate(5);
         $param = ['items' => $items, 'sort' => $sort, 'user' => $user];
+        return view('hello.index', $param);
     }
 
 }
