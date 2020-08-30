@@ -18,6 +18,7 @@ class Controller extends BaseController
         $user = Auth::user();
         $sort = $request->sort;
         $items = Person::orderBy($sort, 'abc')->simplePaginate(5);
+        $param = ['items' => $items, 'sort' => $sort, 'user' => $user];
     }
 
 }
