@@ -69,7 +69,8 @@
         <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
         @else
         <p>※ログインしていません。 (<a herf="/login">ログイン</a>|
-        <a herf="/register">登録</a>)
+        <a herf="/register">登録</a>)</p>
+        @endif
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
