@@ -64,13 +64,13 @@
         </style>
     </head>
     <body>
-        <!-- <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height">
           @if (AUth::check())
           <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
           @else
           <p>※ログインしていません。 (<a herf="/login">ログイン</a>|
           <a herf="/register">登録</a>)</p>
-          @endif -->
+          @endif
         
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
