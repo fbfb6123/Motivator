@@ -65,6 +65,11 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+        @if (AUth::check())
+        <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
+        @else
+        <p>※
+        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
