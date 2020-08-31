@@ -13,6 +13,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
 
+    //下の記述をすると互換性がないとの理由でreward/messageのviewが表示されない。
     // public function index(Request $request)
     // {
     //     $user = Auth::user();
