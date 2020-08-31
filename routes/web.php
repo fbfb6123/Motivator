@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::resource('reward', 'RewardController');
 
-// message追加予定
+Route::resource('message', 'MessageController');
