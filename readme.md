@@ -102,3 +102,6 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 ### Association
 - belongs_to :user
 - belongs_to :reward
+
+## 今後追加していく予定の機能
+- レスポンシブ対応
