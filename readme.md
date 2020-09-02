@@ -78,7 +78,6 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ## アプリケーション概要
 
-
 ## movere DB設計
 
 ## usersテーブル
