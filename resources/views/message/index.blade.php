@@ -27,11 +27,11 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <a class="btn btn-primary" href="#">Sign In</a>
-    </div>
-  </nav>
+	<div class="container">
+		<a class="navbar-brand" href="{{ url('/') }}">トップ</a>
+		<a class="btn btn-primary" href="{{ url('/about') }}">会社概要</a>
+	</div>
+</nav>
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
