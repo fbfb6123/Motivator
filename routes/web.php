@@ -23,3 +23,7 @@ Route::resource('sale', 'SaleController');
 Route::get('sales', 'SaleController@index');
 Route::get('ajax/sale', 'Ajax\SaleController@index');
 Route::get('ajax/sale/year', 'Ajax\SaleController@years');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
