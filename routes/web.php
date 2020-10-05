@@ -27,3 +27,6 @@ Route::get('ajax/sale/year', 'Ajax\SaleController@years');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/{any}', function(){
+    return view('App');
+})->where('any', '.*'); //補足：.*は、正規表現で0文字以上の任意の文字列を意味する
