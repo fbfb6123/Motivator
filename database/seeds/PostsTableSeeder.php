@@ -11,7 +11,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('posts')->insert([
+        \DB::table('post')->insert([
         [
             'name' => '名前1',
             'content' => '内容1'

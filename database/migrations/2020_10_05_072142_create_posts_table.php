@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements('id');
             // name,contentカラム追加
             $table->string('name');
@@ -29,6 +29,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('post');
     }
 }

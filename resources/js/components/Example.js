@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 export default class Example extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            posts: []
+        };
+    }
+    componentDidMount() {
+        axios
+            .get('/api/posts')
+            .then(response => {
+                this.setState({posts: response.data});
+            })
+            .catch(() => {
+                console.log('通信に失敗しました');
+            });
+    }
+
+    renderPosts() {
+        return this.state.posts.map(post => {
+            return (
+                <li key={post.key}>
+                    {post.name}: {post.content}
+                </li>
+            );
+        });
+    }
+
     render() {
         return (
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">React</div>
-
-                            <div className="card-body">I'm an example component!</div>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                    {this.renderPosts()}
+                </ul>
             </div>
         );
     }
