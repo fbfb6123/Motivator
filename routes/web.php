@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('reward', 'RewardController');
 
 Route::resource('message', 'MessageController');
+
+Route::get('sales', 'SaleController@index'); // 👈 ブラウザでアクセス
+Route::get('ajax/sales', 'Ajax\SaleController@index'); // 👈 売上データ取得
+Route::get('ajax/sales/years', 'Ajax\SaleController@years'); // 👈 年データ取得（セレクトボックス用）
