@@ -18,3 +18,24 @@ Route::get('/', function () {
 Route::resource('reward', 'RewardController');
 
 Route::resource('message', 'MessageController');
+
+Route::resource('post', 'PostController');
+
+Route::resource('sale', 'SaleController');
+Route::get('sales', 'SaleController@index');
+Route::get('ajax/sale', 'Ajax\SaleController@index');
+Route::get('ajax/sale/year', 'Ajax\SaleController@years');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/{any}', function(){
+    return view('App');
+})->where('any', '.*'); //補足：.*は、正規表現で0文字以上の任意の文字列を意味する
+
+
+//Ajax
+Route::get('/admin/result/{questionId}', 'Admin\ResultController@index');
+
+Route::match(['get', 'post'], '/admin/result/ajax/{questionId}', 'Admin\ResultController@ajax');
+

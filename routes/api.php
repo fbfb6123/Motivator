@@ -15,4 +15,10 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+    Route::get('ajax/sales', 'Ajax\SaleController@index');
+    Route::get('ajax/sales/years', 'Ajax\SaleController@years');
+});
+
+Route::group(['middleware' => ['api']], function() {
+    Route::resource('post' , 'api\PostController');
 });
